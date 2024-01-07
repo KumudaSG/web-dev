@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Forms Clone</title>
+</head>
+<body>
+    <section class = 'form-info'>
+        <h1> Contact Information</h1>
+    </section>
+    <section class = 'questions'>
+        <fieldset>
+            <legend> <!-- Used as a caption to provide context to user-->
+            Enter your name</legend>
+            <input type = 'text' placeholder="Short Answer">
+        </fieldset>
+        <!--fieldset is used to group the inputs and labels for a particular qn-->
+        <fieldset>
+            <legend>Enter your phone number</legend>
+            <label><input type = 'radio' name = 'checkphno' id = 'home'> Home</label>
+            <label><input type = 'radio' name = 'checkphno' id = 'Work'> Work</label>
+        </fieldset>
+        <!-- When we press submit, the name and id of the button gets saved,
+        to select only one answer for the qn we need it to have different names.-->
+
+        <fieldset>
+            <legend> What are your hobbies?</legend>
+            <input type = "checkbox"> Reading
+        </fieldset>
+
+    </section>
+    <br>
+    <button type = "submit">Submit</button>
+</body>
+</html>
