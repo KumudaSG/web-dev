@@ -30,7 +30,7 @@ JOBS = [
 ]
 
 
-@app.route('/')
+@flaskapp.route('/')
 #passing in JOBS as an argument gives us access to it in the html
 def start_of_everything():
     return render_template('home.html', jobs = JOBS)
@@ -38,13 +38,13 @@ def start_of_everything():
 '''When using the term 'API endpoint' or 'JSON endpoint' people mean this part, where we can access info,
 not only through an html page, but also as a json output.'''
 
-@app.route('/api/jobs')
+@flaskapp.route('/api/jobs')
 def jobsssss():
     return jsonify(JOBS)
 
 #setting host to this makes the website accessible to any IP address. 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0',debug = True)
+    flaskapp.run(host = '0.0.0.0',debug = True)
 
 
 
