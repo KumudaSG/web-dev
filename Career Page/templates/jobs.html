@@ -1,0 +1,12 @@
+<!--Making a separate html page to facilitate multiple places where we might have to use this info-->
+<div class = 'border-bottom'> 
+    <h5>{{ job['title']}}</h4>
+    <div>
+        Location: {{ job['location']}}
+    </div>
+    {% if 'salary' in job %}
+    <div>
+        Salary: {{ job['salary']}}
+    </div>
+    {% endif %}
+</div>
