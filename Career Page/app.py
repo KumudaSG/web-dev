@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -28,11 +28,19 @@ JOBS = [
         'location': 'Champaign, IL',
     }
 ]
-@app.route('/')
 
+
+@app.route('/')
 #passing in JOBS as an argument gives us access to it in the html
 def start_of_everything():
     return render_template('home.html', jobs = JOBS)
+
+'''When using the term 'API endpoint' or 'JSON endpoint' people mean this part, where we can access info,
+not only through an html page, but also as a json output.'''
+
+@app.route('/api/jobs')
+def jobsssss():
+    return jsonify(JOBS)
 
 #setting host to this makes the website accessible to any IP address. 
 if __name__ == '__main__':
